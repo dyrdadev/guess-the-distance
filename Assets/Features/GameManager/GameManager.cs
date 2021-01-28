@@ -37,6 +37,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     [SerializeField] private Color incorrectAnswerColor;
 
     public Material destinationMaterial;
+    private int lastCityIndex = -1;
     private City currentGameLocation;
     private Vector3 currentCameraLookAtTarget = Vector3.forward;
     private static System.Random targetRand = null;
@@ -115,8 +116,14 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             targetRand = new System.Random();
         }
 
-        // Determine a random index
-        var index = targetRand.Next(0, gameLocationList.Count);
+        // Determine a random index (expect same city again)
+        var index = lastCityIndex;
+        while (index == lastCityIndex)
+        {
+            index = targetRand.Next(0, gameLocationList.Count);
+        }
+
+        lastCityIndex = index;
 
         currentGameLocation = gameLocationList[index];
 
