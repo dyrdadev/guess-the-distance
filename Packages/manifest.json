@@ -10,6 +10,7 @@
     "com.unity.timeline": "1.3.4",
     "com.unity.ugui": "1.0.0",
     "io.dyrda.milky-way-skybox": "https://github.com/dyrdaio/milky-way-skybox-for-unity.git#0.0.1",
+    "io.dyrda.singleton-mono-behaviour": "https://github.com/dyrdaio/singleton-mono-behaviour.git#0.0.3",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

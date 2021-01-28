@@ -96,6 +96,13 @@
       "dependencies": {},
       "hash": "2f92344332800d4599a906a6cfb3e8619cff3a9a"
     },
+    "io.dyrda.singleton-mono-behaviour": {
+      "version": "https://github.com/dyrdaio/singleton-mono-behaviour.git#0.0.3",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "5967ba93232a07df997ab5e1feaf1dfc20579373"
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
