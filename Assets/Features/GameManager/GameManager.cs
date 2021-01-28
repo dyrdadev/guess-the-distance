@@ -160,15 +160,15 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
         if (GameLocationService.Instance.locationServiceInitialized)
         {
-            currentPlayerLocationTrsnfm.localPosition = globeTrsnfm.position + globeTrsnfm.rotation *
+            SetMarkerTransform(currentPlayerLocationTrsnfm,
                 GameLocationService.GPSToWorld(
                     GameLocationService.Instance.currentLocationInfo.latitude,
                     GameLocationService.Instance.currentLocationInfo.longitude,
-                    GameLocationService.Instance.currentLocationInfo.altitude, 2.5);
+                    GameLocationService.Instance.currentLocationInfo.altitude, 2.5));
         }
         else
         {
-            currentPlayerLocationTrsnfm.localPosition = GameLocationService.GPSToWorld(48, 11.3f, 2.5, 2.5);
+            SetMarkerTransform(currentPlayerLocationTrsnfm,GameLocationService.GPSToWorld(48, 11.3f, 2.5, 2.5));
         }
 
         // Update GUI elements
@@ -186,8 +186,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     private void PrepareResultState()
     {
         // Set location object
-        currentGameLocationTrnsfm.localPosition = GameLocationService.GPSToWorld(currentGameLocation.lat,
-                currentGameLocation.lon, 2.5, 2.5);
+        SetMarkerTransform(currentGameLocationTrnsfm, GameLocationService.GPSToWorld(currentGameLocation.lat,
+            currentGameLocation.lon, 2.5, 2.5));
 
         // Update GUI elements
         logInAnswerButton.SetActive(false);
@@ -233,6 +233,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         }
     }
 
+    private void SetMarkerTransform(Transform marker, Vector3 position)
+    {
+        marker.localPosition = position;
+        marker.LookAt(globeTrsnfm.position);
+    }
 
     public void IncreaseScore()
     {
