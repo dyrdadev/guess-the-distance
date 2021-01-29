@@ -10,18 +10,18 @@ using DyrdaIo.Singleton;
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
     [Header("Gameplay Configuration")]
-    [Range(0,100.0f)]
+    [Range(0, 100.0f)]
     [SerializeField] private float deviationPercentage = 10;
     [SerializeField] private List<City> gameLocationList = new List<City>();
     [SerializeField] private float RotationSpeed = 1.0f;
-    
-    
+
+
     [Header("Globe References")]
     [SerializeField] private Transform currentPlayerLocationTrsnfm;
     [SerializeField] private Transform currentGameLocationTrnsfm;
     [SerializeField] private Transform globeTrsnfm;
     [SerializeField] private Transform cameraPivot;
-    
+
     [Header("GUI References")]
     [SerializeField] private Text taskLabel;
     [SerializeField] private Text scoreLabel;
@@ -41,7 +41,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     private City currentGameLocation;
     private Vector3 currentCameraLookAtTarget = Vector3.forward;
     private static System.Random targetRand = null;
-    
+
     public enum State
     {
         none,
@@ -69,8 +69,9 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             DetermineCameraLookAtTarget();
         }
     }
+
     private State m_crntState = State.none;
-    
+
     protected int score
     {
         get => m_score;
@@ -85,8 +86,9 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             }
         }
     }
+
     private int m_score;
-    
+
     public void Start()
     {
         score = 0;
@@ -96,13 +98,9 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     public void Update()
     {
-        //find the vector pointing from our position to the target
-        var _direction = (currentCameraLookAtTarget - cameraPivot.position).normalized;
-
-        //create the rotation we need to be in to look at the target
-        var _lookRotation = Quaternion.LookRotation(_direction);
-
         DetermineCameraLookAtTarget();
+        var _direction = (currentCameraLookAtTarget - cameraPivot.position).normalized;
+        var _lookRotation = Quaternion.LookRotation(_direction);
 
         //rotate us over time according to speed until we are in the required rotation
         cameraPivot.rotation = Quaternion.Slerp(cameraPivot.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
@@ -144,20 +142,19 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     }
 
     public void LogInAnswerButton()
-     {
-         crntState = State.result;
-     }
+    {
+        crntState = State.result;
+    }
 
     public void NextCityButton()
     {
         NextLevel();
     }
-    
+
     private void PrepareInputState()
     {
-        // Set location object
-        currentGameLocationTrnsfm.position = globeTrsnfm.position;
-
+        // Set location markers:
+        // Set player location marker.
         if (GameLocationService.Instance.locationServiceInitialized)
         {
             SetMarkerTransform(currentPlayerLocationTrsnfm,
@@ -168,10 +165,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         }
         else
         {
-            SetMarkerTransform(currentPlayerLocationTrsnfm,GameLocationService.GPSToWorld(48, 11.3f, 2.5, 2.5));
+            SetMarkerTransform(currentPlayerLocationTrsnfm, GameLocationService.GPSToWorld(48, 11.3f, 2.5, 2.5));
         }
 
-        // Update GUI elements
+        // Hide destination marker.
+        currentGameLocationTrnsfm.position = globeTrsnfm.position;
+
+        // Update GUI elements:
         taskLabel.text = "Guess the Distance to " + currentGameLocation.name;
         infoButton.SetActive(true);
         infoPanel.SetActive(false);
@@ -185,17 +185,16 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     private void PrepareResultState()
     {
-        // Set location object
+        // Set destination location marker.
         SetMarkerTransform(currentGameLocationTrnsfm, GameLocationService.GPSToWorld(currentGameLocation.lat,
             currentGameLocation.lon, 2.5, 2.5));
 
-        // Update GUI elements
+        // Update GUI elements:
         logInAnswerButton.SetActive(false);
         infoButton.SetActive(false);
         infoPanel.SetActive(false);
         nextCityButton.SetActive(true);
         resultGO.SetActive(true);
-
         inputField.interactable = false;
 
         // Default position
@@ -212,7 +211,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         var distance = GameLocationService.DistanceInKm(tempLat, tempLon, (float) currentGameLocation.lat,
             (float) currentGameLocation.lon);
 
-        // Rexolve Input
+        // Resolve Input
         var x = 0;
         int.TryParse(inputField.text, out x);
 
