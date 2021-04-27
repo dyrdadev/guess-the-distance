@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Linq;
 using System;
-using DyrdaIo.Singleton;
+using DyrdaDev.Singleton;
 
 public class GameLocationService : SingletonMonoBehaviour<GameLocationService>
 {

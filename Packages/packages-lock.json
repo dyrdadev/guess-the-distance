@@ -8,7 +8,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
-      "version": "1.0.5",
+      "version": "1.0.6",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
@@ -24,10 +24,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.5",
+      "version": "2.0.7",
       "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.test-framework": "1.1.9"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.vscode": {
@@ -47,11 +49,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.recorder": {
-      "version": "2.5.2",
+      "version": "2.5.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.timeline": "1.2.17"
+        "com.unity.timeline": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -63,11 +65,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.1.19",
+      "version": "1.1.24",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.ext.nunit": "1.0.5",
+        "com.unity.ext.nunit": "1.0.6",
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
@@ -83,10 +85,15 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.3.4",
+      "version": "1.4.7",
       "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.modules.director": "1.0.0",
+        "com.unity.modules.animation": "1.0.0",
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.particlesystem": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.ugui": {
@@ -98,19 +105,19 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
-    "io.dyrda.milky-way-skybox": {
-      "version": "https://github.com/dyrdaio/milky-way-skybox-for-unity.git#0.0.1",
+    "dev.dyrda.milky-way-skybox": {
+      "version": "https://github.com/dyrdadev/milky-way-skybox-for-unity.git#0.0.3",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2f92344332800d4599a906a6cfb3e8619cff3a9a"
+      "hash": "d8062e7b4654b6122e28ef1ffca0fec795a4f08c"
     },
-    "io.dyrda.singleton-mono-behaviour": {
-      "version": "https://github.com/dyrdaio/singleton-mono-behaviour.git#0.0.3",
+    "dev.dyrda.singleton-mono-behaviour": {
+      "version": "https://github.com/dyrdadev/singleton-mono-behaviour.git#0.0.6",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "5967ba93232a07df997ab5e1feaf1dfc20579373"
+      "hash": "2bd302e9278ef0c75334f8606f8a32b8cbb8d469"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
