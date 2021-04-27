@@ -9,7 +9,7 @@ In the game you have to guess the distance from your current location to a city 
 <p align=center>
     <br>
     <br>
-        <a href="https://github.com/dyrdaio/guess-the-distance">
+        <a href="https://github.com/dyrdadev/guess-the-distance">
             <img src="./Media/guess_the_distance_gameplay_13.gif" alt="A device mockup of the game."/>
         </a>
     <br>
@@ -41,7 +41,7 @@ If you want to contribute to this project, you are welcome to do so. Just write 
 <p align=center>
     <br>
     <br>
-    <a href="https://github.com/dyrdaio/guess-the-distance">
+    <a href="https://github.com/dyrdadev/guess-the-distance">
         <img src="./Media/guess_the_distance_globe_4.gif" alt="A device mockup of the game."/>
     </a>
     <br>
