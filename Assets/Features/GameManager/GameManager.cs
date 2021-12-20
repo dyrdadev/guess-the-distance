@@ -158,14 +158,14 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         if (GameLocationService.Instance.locationServiceInitialized)
         {
             SetMarkerTransform(currentPlayerLocationTrsnfm,
-                GameLocationService.GPSToWorld(
+                GameLocationService.LocationToWorld(
                     GameLocationService.Instance.currentLocationInfo.latitude,
                     GameLocationService.Instance.currentLocationInfo.longitude,
                     GameLocationService.Instance.currentLocationInfo.altitude, 2.5));
         }
         else
         {
-            SetMarkerTransform(currentPlayerLocationTrsnfm, GameLocationService.GPSToWorld(48, 11.3f, 2.5, 2.5));
+            SetMarkerTransform(currentPlayerLocationTrsnfm, GameLocationService.LocationToWorld(48, 11.3f, 2.5, 2.5));
         }
 
         // Hide destination marker.
@@ -186,7 +186,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     private void PrepareResultState()
     {
         // Set destination location marker.
-        SetMarkerTransform(currentGameLocationTrnsfm, GameLocationService.GPSToWorld(currentGameLocation.lat,
+        SetMarkerTransform(currentGameLocationTrnsfm, GameLocationService.LocationToWorld(currentGameLocation.lat,
             currentGameLocation.lon, 2.5, 2.5));
 
         // Update GUI elements:

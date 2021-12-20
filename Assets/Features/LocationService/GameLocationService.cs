@@ -68,7 +68,7 @@ public class GameLocationService : SingletonMonoBehaviour<GameLocationService>
         }
     }
 
-    public static Vector3 GPSToWorld(double lat, double lon, double alt, double rad)
+    public static Vector3 LocationToWorld(double lat, double lon, double alt, double rad)
     {
         // to radians
         lat = Mathf.PI * lat / 180;
