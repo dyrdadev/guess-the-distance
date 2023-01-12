@@ -1429,8 +1429,8 @@ PrefabInstance:
 
         Guess the distance from your current location
         to the city mentioned in the text label. Enter your answer in the input field
-        below and click the "Guess" button. You will receive a score if your answer
-        is not more than 10% off. Play again by clicking on "Next city".
+        below and click the "Guess" button. You receive a score if your answer is
+        not more than 10% off. Play again by clicking on "Next city".
 
 
 
