@@ -376,7 +376,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472272354}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -402,7 +402,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7360
+  m_Name: pb_Mesh-1462
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -596,7 +596,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7336
+  m_Name: pb_Mesh-1438
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1274,7 +1274,7 @@ PrefabInstance:
     - target: {fileID: 1489811924344107135, guid: 50d8599483e670b4b92243c473329bca,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -120.33191
+      value: -120.33203
       objectReference: {fileID: 0}
     - target: {fileID: 4453630043658262555, guid: 50d8599483e670b4b92243c473329bca,
         type: 3}
@@ -1401,6 +1401,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1442022861}
+    - target: {fileID: 4453630044182683038, guid: 50d8599483e670b4b92243c473329bca,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -871.5706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453630044182683038, guid: 50d8599483e670b4b92243c473329bca,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 403.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453630044182683038, guid: 50d8599483e670b4b92243c473329bca,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1471
+      objectReference: {fileID: 0}
     - target: {fileID: 4453630044414570962, guid: 50d8599483e670b4b92243c473329bca,
         type: 3}
       propertyPath: m_AnchoredPosition.x

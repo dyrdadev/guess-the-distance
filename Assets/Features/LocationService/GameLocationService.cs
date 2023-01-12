@@ -14,7 +14,7 @@ public class GameLocationService : SingletonMonoBehaviour<GameLocationService>
 
     public void Start()
     {
-        StartCoroutine("StartLocationService");
+        StartCoroutine(StartLocationService());
     }
 
     public void Update()
@@ -30,12 +30,14 @@ public class GameLocationService : SingletonMonoBehaviour<GameLocationService>
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser)
         {
+            Debug.Log("Location is disabled by the user.");
+            
             yield break;
         }
 
         // Start service before querying location
         Input.location.Start();
-
+        
         // Wait until service initializes
         var maxWait = 20;
         while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)

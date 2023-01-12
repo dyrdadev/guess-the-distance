@@ -165,7 +165,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         }
         else
         {
-            SetMarkerTransform(currentPlayerLocationTrsnfm, GameLocationService.LocationToWorld(48, 11.3f, 2.5, 2.5));
+            SetMarkerTransform(currentPlayerLocationTrsnfm, GameLocationService.LocationToWorld(48, 11.3f, 0, 2.5));
         }
 
         // Hide destination marker.
@@ -187,7 +187,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         // Set destination location marker.
         SetMarkerTransform(currentGameLocationTrnsfm, GameLocationService.LocationToWorld(currentGameLocation.lat,
-            currentGameLocation.lon, 2.5, 2.5));
+            currentGameLocation.lon, 0, 2.5));
 
         // Update GUI elements:
         logInAnswerButton.SetActive(false);
