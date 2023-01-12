@@ -70,6 +70,14 @@ public class GameLocationService : SingletonMonoBehaviour<GameLocationService>
         }
     }
 
+    /// <summary>
+    /// Location to World. (alt is currently not used.)
+    /// </summary>
+    /// <param name="lat">in degrees</param>
+    /// <param name="lon">in degrees</param>
+    /// <param name="alt">in meters</param>
+    /// <param name="rad">in unity units</param>
+    /// <returns></returns>
     public static Vector3 LocationToWorld(double lat, double lon, double alt, double rad)
     {
         // to radians
