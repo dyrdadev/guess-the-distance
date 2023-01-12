@@ -1438,18 +1438,19 @@ PrefabInstance:
 
 
         The
-        credit for the "The Milky Way panorama" go to the European Southern Observatory
+        credit for "The Milky Way panorama" goes to the European Southern Observatory
         / Serge Brunier (ESO/S. Brunier). The images are licensed under a Creative
         Commons Attribution 4.0 International License. Visit their website (https://www.eso.org/public/images/eso0932a/)
         for more information.
 
 
-        The credit for the Earth textures go to the
-        NASA.
+        The credit for the "Blue Marble" images goes
+        to Visible Earth and the National Aeronautics and Space Administration (NASA).
 
 
-        Visit the project page (https://github.com/dyrdaio/guess-the-distance)
-        for more information.'
+        Visit
+        the project page (https://github.com/dyrdaio/guess-the-distance) for more
+        information.'
       objectReference: {fileID: 0}
     - target: {fileID: 4453630044976860072, guid: 50d8599483e670b4b92243c473329bca,
         type: 3}
