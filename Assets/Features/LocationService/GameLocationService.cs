@@ -80,31 +80,11 @@ public class GameLocationService : SingletonMonoBehaviour<GameLocationService>
     /// <returns></returns>
     public static Vector3 LocationToWorld(double lat, double lon, double alt, double rad)
     {
-        // to radians
-        lat = Mathf.PI * lat / 180;
-        lon = Mathf.PI * lon / 180;
-
-        // Spherical coordinates to orthogonal axes:
-        // switch y and z -> y is up
-        var x = rad * Math.Cos(lat) * Math.Cos(lon);
-        var z = rad * Math.Cos(lat) * Math.Sin(lon);
-        var y = rad * Math.Sin(lat);
-
-        return new Vector3((float) x, (float) y, (float) z);
+       throw new NotImplementedException();
     }
 
     public static float DistanceInKm(float lat1, float lon1, float lat2, float lon2)
     {
-        var radius = 6371;
-        var lat = Mathf.Deg2Rad * (lat2 - lat1);
-        var lon = Mathf.Deg2Rad * (lon2 - lon1);
-
-        // Haversine formula:
-        var a = Mathf.Sin(lat / 2) * Mathf.Sin(lat / 2) + Mathf.Cos(Mathf.Deg2Rad * lat1) *
-            Mathf.Cos(Mathf.Deg2Rad * lat2) * Mathf.Sin(lon / 2) * Mathf.Sin(lon / 2);
-        var c = 2 * Mathf.Atan2(Mathf.Sqrt(a), Mathf.Sqrt(1 - a));
-        var d = radius * c;
-
-        return Math.Abs(d);
+        throw new NotImplementedException();
     }
 }
