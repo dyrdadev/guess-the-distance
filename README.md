@@ -34,7 +34,7 @@ Also note the dependencies of the project. You can find details about projects l
 
 ## Support & Contribute
 
-This project was created by [Daniel Dyrda](https://dyrda.page). If you want to support me and my projects, you can follow me on [GitHub (dyrdadev)](https://github.com/dyrdadev) and [Twitter (@daniel_dyrda)](https://twitter.com/daniel_dyrda). Just come by and say hello.
+This project was created by [Daniel Dyrda](https://dyrda.page). If you want to support me and my projects, you can follow me on [GitHub (dyrdadev)](https://github.com/dyrdadev) and [Mastodon](https://dyrda.page/contact). Just come by and say hello.
 
 If you want to contribute to this project, you are welcome to do so. Just leave me a message and we will find a way to collaborate.
 
